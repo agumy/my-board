@@ -1,16 +1,31 @@
 {
+  "root": true,
   "env": {
     "es2020": true
   },
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020,
+    "project": ["./tsconfig.json"]
+  },
   "extends": [
     "eslint:recommended",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react",
-    "plugin:react-hooks",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "settings": {
+    "react": {
+      "version": "detect" // React version. "detect" automatically picks the version you have installed.
+    }
+  },
   "rules": {
-    "@typescript-eslint/no-non-null-assertion": false
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }
