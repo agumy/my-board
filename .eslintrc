@@ -1,0 +1,16 @@
+{
+  "env": {
+    "es2020": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react",
+    "plugin:react-hooks",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": false
+  }
+}
