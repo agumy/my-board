@@ -1,11 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import { App } from "./App"
+import "./reset.css"
 import "./styles.css"
 
 const root = document.getElementById("root")!
 
-ReactDOM.render(<A />, root)
-
-function A() {
-  return <div className="m-10">Hello, world!</div>
-}
+ReactDOM.render(<App />, root)
