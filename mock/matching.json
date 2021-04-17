@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "name": "Worker//Holic",
+      "twitter": "@worker_holic",
+      "description": "ぼくとつながろう",
+      "artifacts": [
+        {
+          "service": "sound_cloud",
+          "url": "http://soundcloud/hogehoge",
+          "title": "I'm I",
+          "description": "VTuber れぇぴさんのオリジナル曲"
+        },
+        {
+          "service": "youtube",
+          "url": "http://youtube.com/hogehoge",
+          "title": "Tell your world",
+          "description": "うるせぇ！！！　ドン！！！"
+        }
+      ]
+    },
+    {
+      "name": "Agumy",
+      "twitter": "@agumy",
+      "description": "Future / Chill",
+      "artifacts": [
+        {
+          "service": "sound_cloud",
+          "url": "http://soundcloud/hogehoge",
+          "title": "Pixel Galaxy",
+          "description": "kawaii future bass"
+        },
+        {
+          "service": "youtube",
+          "url": "http://youtube.com/hogehoge",
+          "title": "if",
+          "description": "...if"
+        }
+      ]
+    },
+    {
+      "name": "Snail's House",
+      "twitter": "@snails_house",
+      "description": "I'm evangelist for kawaii future bass",
+      "artifacts": [
+        {
+          "service": "sound_cloud",
+          "url": "http://soundcloud/hogehoge",
+          "title": "Adventure childrenn",
+          "description": "kiite"
+        },
+        {
+          "service": "youtube",
+          "url": "http://youtube.com/hogehoge",
+          "title": "Hot Milk",
+          "description": "chill i"
+        }
+      ]
+    }
+  ]
+}
