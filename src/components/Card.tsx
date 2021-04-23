@@ -1,13 +1,54 @@
-import * as React from "react"
+import React from "react"
+import TinderCard from "react-tinder-card"
+import matchingMock from "../../mock/matching.json"
 
-export const Card: React.VFC = () => {
+// type TinderCardAPI = {
+//   swipe: (directive: "left" | "right" | "top" | "down") => Promise<void>
+// }
+
+type Matching = {
+  users: {
+    name: string
+    twitter: string
+    description: string
+    artifacts: {
+      service: string
+      url: string
+      title: string
+      description: string
+    }[]
+  }[]
+}
+
+type Props = {
+  matching: Matching
+}
+
+export const Card: React.VFC<Props> = ({
+  matching = matchingMock as Matching,
+}) => {
   return (
-    <div className="w-2/5 h-3/4 shadow-xl rounded-lg bg-green-200 flex flex-col">
-      <header className="w-full h-1/5 flex justify-center items-center">
-        <span className="text-gray-700 text-2xl">Title</span>
-      </header>
-      <div className="h-full"></div>
-      <footer className="w-full h-1/5"></footer>
-    </div>
+    <>
+      {matching.users.reverse().map((user) => (
+        <TinderCard
+          key={user.name}
+          // @ts-expect-error It takes a className but has no type definition.
+          className="absolute bg-green-200 bg-white flex flex-col h-3/4 p-5 rounded-lg shadow-xl w-2/5"
+        >
+          <header className="flex h-1/5 items-center justify-center w-full">
+            <span className="text-2xl text-black">{user.name}</span>
+          </header>
+          <div className="h-full"></div>
+          <footer className="flex h-1/5 items-center justify-between text-black w-full">
+            <button className=" bg-accent h-8 rounded-md text-white w-16">
+              Unlike
+            </button>
+            <button className="bg-accent h-8 rounded-md text-white w-16">
+              Like
+            </button>
+          </footer>
+        </TinderCard>
+      ))}
+    </>
   )
 }
